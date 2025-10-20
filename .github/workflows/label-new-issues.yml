@@ -1,9 +1,9 @@
 name: Label new Issues as "ToDO"
 on:
   issues:
-    types:[opened]
+    types: [opened]
 permissions:
-  issues:write
+  issues: write
 jobs:
   label_issue:
     runs-on: ubuntu_latest
