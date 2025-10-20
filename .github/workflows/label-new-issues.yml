@@ -1,0 +1,18 @@
+name: Label new Issues as "ToDO"
+on:
+  issues:
+    types:[opened]
+permissions:
+  issues:write
+jobs:
+  label_issue:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Label new issue as "TODO"
+        uses: actions-ecosystem/action-add-labels@v1.1
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          labels: "TODO"
+      
+    
+  
